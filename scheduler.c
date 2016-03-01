@@ -54,6 +54,6 @@ void Dispatch_Tasks(void)
 
 void Create_tasks(void){
 
-  // Create_Task(blink,5,5);
+  Create_Task(blink,5,5);
 
 }

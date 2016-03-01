@@ -1,4 +1,4 @@
-OBJECTS=main.o scheduler.o setup.o
+OBJECTS=main.o scheduler.o setup.o blink.o
 
 GCC_DIR =  ../../../bin
 SUPPORT_FILE_DIRECTORY = ./include
