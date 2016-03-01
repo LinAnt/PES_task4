@@ -4,9 +4,7 @@
 
 void setup(void){
   WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer // See function above
-	P1DIR = (LED1 | LED2);   	//Set LEDs to output direction
-  P1OUT &= LED1;
-  P1OUT &= LED2;
+	P1DIR |= (LED1 | LED2);   	//Set LEDs to output direction
 
 	BCSCTL1 = CALBC1_1MHZ;  //set DCO to 1Mhz
 	DCOCTL = CALDCO_1MHZ;
@@ -21,7 +19,7 @@ void setup(void){
   P1DIR &= ~S1;   // Set button pin as an input pin
   P1OUT |= S1;    // Set pull up resistor on for button
   P1REN |= S1;    // Enable pull up resistor for button to keep pin high until pressed
-  //  __enable_interrupt();
+  __enable_interrupt();
   _BIS_SR(LPM1_bits + GIE); // Enter LPM1
 }
 

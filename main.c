@@ -13,8 +13,6 @@ __attribute__((interrupt(TIMER0_A0_VECTOR))) void Timer_A(void) {
 int main(void){
   setup();
   Create_tasks();
-  P1OUT &= LED1;
-  P1OUT &= LED2;
 
 
   while(1);
